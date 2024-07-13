@@ -10,6 +10,10 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.1/css/hover-min.css" type="text/css" />
     <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
+
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDM_MyRdEaAmzqqnTaO82L0kGaBpxOgbZw&loading=async&libraries=maps,marker&v=beta" defer>
+    </script>
 </head>
 
 <body>
@@ -61,7 +65,21 @@
                         </h3>
                     </div>
                 </div>
-                <div id="map"></div>
+                <gmp-map
+                        center="43.4142989,-124.2301242"
+                        zoom="4"
+                        map-id="DEMO_MAP_ID"
+                        style="height: 400px"
+                        >
+                        <gmp-advanced-marker
+                            position="37.4220656,-122.0840897"
+                            title="Mountain View, CA"
+                        ></gmp-advanced-marker>
+                        <gmp-advanced-marker
+                            position="47.648994,-122.3503845"
+                            title="Seattle, WA"
+                        ></gmp-advanced-marker>
+                </gmp-map>
             </div>
             <div class="col-md-8 bg-color-groups">
                 <div class="row">
@@ -196,9 +214,7 @@
         </div>
 
     </footer>
-    <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDDHHyac2SiOYPNYxXMK7rqJjnB8nCaaxE&callback=initMap"></script>
-    <script src="assets/js/maps.js"></script>
+
 </body>
 
 </html>
